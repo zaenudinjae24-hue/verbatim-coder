@@ -1,0 +1,1880 @@
+{
+  "version": "1.0",
+  "description": "Memory Bank untuk AI Coding Verbatim - berisi contoh studi yang sudah dikerjakan",
+  "coding_rules": {
+    "multi_code_separator": ";",
+    "numbering_convention": {
+      "positive_themes": "100-499 (contoh: 101, 102, 165)",
+      "negative_themes": "500-599 (contoh: 501, 531)",
+      "brand_awareness": "1-99 (khusus TOM/brand list)",
+      "no_answer_others": "999 = tidak ada / sudah bagus, 99 = lainnya/tidak valid"
+    },
+    "language": "Bilingual (ID + EN translation)",
+    "nett_format": "Nama Kategori - Nett (ID) / Category Name - Nett (EN)"
+  },
+  "studies": [
+    {
+      "study_id": "D2",
+      "topic": "Alasan menyatakan kendaraan operasional (Isuzu/Hino/Mitsubishi)",
+      "question": "D2. Apa alasan Anda menyatakan kendaraan operasional Anda? Jelaskan secara detail",
+      "type": "OE - Open Ended, multi-column per brand, multi-code allowed",
+      "codelist": [
+        {
+          "code": "Kode",
+          "nett": "",
+          "label_id": "Keterangan",
+          "label_en": "Translate"
+        },
+        {
+          "code": 101,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Awet / tidak mudah rusak",
+          "label_en": "Durable / not easily damaged"
+        },
+        {
+          "code": 102,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Mesinnya tangguh / handal / bandel",
+          "label_en": "Tough / reliable / robust engine"
+        },
+        {
+          "code": 103,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Akselerasi mesin tetap responsif meskipun dalam muatan penuh",
+          "label_en": "Engine acceleration remains responsive even under full load"
+        },
+        {
+          "code": 104,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Banyak pilihan sparepartnya",
+          "label_en": "Wide availability of spare parts options"
+        },
+        {
+          "code": 105,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Daya angkut besar",
+          "label_en": "Large carrying capacity"
+        },
+        {
+          "code": 106,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Daya angkut kuat",
+          "label_en": "Strong load-carrying capability"
+        },
+        {
+          "code": 107,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Penunjang operasional perusahaan / penunjang pekerjaan",
+          "label_en": "Supports business operations / work activities"
+        },
+        {
+          "code": 108,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Performanya bagus",
+          "label_en": "Good performance"
+        },
+        {
+          "code": 110,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Performa mesin sangat bertenaga saat melewati jalan menanjak",
+          "label_en": "Engine delivers strong performance when driving uphill"
+        },
+        {
+          "code": 113,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Rangkanya kuat / kokoh",
+          "label_en": "Strong / sturdy chassis"
+        },
+        {
+          "code": 115,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Kualitas lampunya diatas dari mobil biasanya",
+          "label_en": "Better lighting quality than typical vehicles"
+        },
+        {
+          "code": 116,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Ban berkualitas bagus / kuat",
+          "label_en": "High-quality / durable tires"
+        },
+        {
+          "code": 117,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Kapasitas angkut sesuai dengan kebutuhan",
+          "label_en": "Load capacity meets operational needs"
+        },
+        {
+          "code": 118,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Rem berfungsi dengan baik / bagus",
+          "label_en": "Brakes function well / effectively"
+        },
+        {
+          "code": 121,
+          "nett": "Fitur - Nett",
+          "label_id": "Fitur interior yang fungsional membantu mengurangi tingkat kelelahan supir",
+          "label_en": "Functional interior features help reduce driver fatigue"
+        },
+        {
+          "code": 122,
+          "nett": "Fitur - Nett",
+          "label_id": "Ada fitur keselamatan",
+          "label_en": "Equipped with safety features"
+        },
+        {
+          "code": 123,
+          "nett": "Fitur - Nett",
+          "label_id": "Sistem pendingin kabin (AC) berfungsi dengan baik",
+          "label_en": "Air conditioning (AC) system functions well"
+        },
+        {
+          "code": 124,
+          "nett": "Fitur - Nett",
+          "label_id": "Sistem penggerak roda yang handal",
+          "label_en": "Reliable drivetrain system"
+        },
+        {
+          "code": 125,
+          "nett": "Fitur - Nett",
+          "label_id": "Memiliki radius putar yang sangat baik",
+          "label_en": "Excellent turning radius"
+        },
+        {
+          "code": 141,
+          "nett": "Image produk - Nett",
+          "label_id": "Merek ternama",
+          "label_en": "Well-known brand"
+        },
+        {
+          "code": 142,
+          "nett": "Image produk - Nett",
+          "label_id": "Merek mobil mewah",
+          "label_en": "Premium vehicle brand"
+        },
+        {
+          "code": 143,
+          "nett": "Image produk - Nett",
+          "label_id": "Brand otomotif yang fokus pada kendaraan niaga",
+          "label_en": "Automotive brand focused on commercial vehicles"
+        },
+        {
+          "code": 144,
+          "nett": "Image produk - Nett",
+          "label_id": "Merek terpercaya",
+          "label_en": "Trusted brand"
+        },
+        {
+          "code": 145,
+          "nett": "Image produk - Nett",
+          "label_id": "Sangat efisien",
+          "label_en": "Highly efficient"
+        },
+        {
+          "code": 146,
+          "nett": "Image produk - Nett",
+          "label_id": "Banyak yang menggunakan",
+          "label_en": "Widely used by many people"
+        },
+        {
+          "code": 161,
+          "nett": "Harga dan Biaya - Nett",
+          "label_id": "Harga terjangkau / baik (termasuk sparepart)",
+          "label_en": "Affordable price / good value (including spare parts)"
+        },
+        {
+          "code": 162,
+          "nett": "Harga dan Biaya - Nett",
+          "label_id": "Harga sesuai dengan kualitas / fasilitas yang didapat",
+          "label_en": "Price matches the quality / features provided"
+        },
+        {
+          "code": 163,
+          "nett": "Harga dan Biaya - Nett",
+          "label_id": "Harga stabil",
+          "label_en": "Stable pricing"
+        },
+        {
+          "code": 164,
+          "nett": "Harga dan Biaya - Nett",
+          "label_id": "Harga jual kembali tinggi",
+          "label_en": "High resale value"
+        },
+        {
+          "code": 165,
+          "nett": "Harga dan Biaya - Nett",
+          "label_id": "Bahan bakar  / BBM irit",
+          "label_en": "Fuel-efficient"
+        },
+        {
+          "code": 166,
+          "nett": "Harga dan Biaya - Nett",
+          "label_id": "Biaya operasional lebih irit / murah",
+          "label_en": "Lower / more economical operating costs"
+        },
+        {
+          "code": 167,
+          "nett": "Harga dan Biaya - Nett",
+          "label_id": "Harga kompetitif",
+          "label_en": "Competitive pricing"
+        },
+        {
+          "code": 181,
+          "nett": "Perawatan unit  - Nett",
+          "label_id": "Suku cadangnya mudah ditemukan / didapat",
+          "label_en": "Spare parts are easy to find / obtain"
+        },
+        {
+          "code": 182,
+          "nett": "Perawatan unit  - Nett",
+          "label_id": "Ada servis gratis",
+          "label_en": "Free service is provided"
+        },
+        {
+          "code": 183,
+          "nett": "Perawatan unit  - Nett",
+          "label_id": "Teknisi berkompeten dibidangnya",
+          "label_en": "Technicians are highly competent in their field"
+        },
+        {
+          "code": 184,
+          "nett": "Perawatan unit  - Nett",
+          "label_id": "Garansi yang diberikan cukup panjang",
+          "label_en": "Long warranty coverage"
+        },
+        {
+          "code": 185,
+          "nett": "Perawatan unit  - Nett",
+          "label_id": "Perawatannya mudah",
+          "label_en": "Easy maintenance"
+        },
+        {
+          "code": 187,
+          "nett": "Perawatan unit  - Nett",
+          "label_id": "Bengkelnya banyak",
+          "label_en": "Extensive workshop network"
+        },
+        {
+          "code": 191,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Desainnya menarik (kekinian & inovasi)",
+          "label_en": "Attractive design (modern and innovative)"
+        },
+        {
+          "code": 192,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Jenis kendaraan besar",
+          "label_en": "Large vehicle type"
+        },
+        {
+          "code": 194,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Ada komunitas yang memudahkan untuk bertukar informasi mengenai perawatan mobil",
+          "label_en": "Has a community that facilitates sharing information about vehicle maintenance"
+        },
+        {
+          "code": 195,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Banyak pilihan model mobilnya",
+          "label_en": "Wide range of vehicle models"
+        },
+        {
+          "code": 196,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Banyak keuntungan yang didapat",
+          "label_en": "Offers many benefits"
+        },
+        {
+          "code": 197,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Kabinnya luas",
+          "label_en": "Spacious cabin"
+        },
+        {
+          "code": 199,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Mampu bersaing dengan merek lain",
+          "label_en": "Able to compete with other brands"
+        },
+        {
+          "code": 201,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Mudah untuk penjualan atau tukar tambah unit",
+          "label_en": "Easy to resell or trade in the vehicle"
+        },
+        {
+          "code": 202,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Ukuran baknya luas",
+          "label_en": "Spacious cargo bed"
+        },
+        {
+          "code": 204,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Nyaman digunakan / dikendarai (kabin dan kursi)",
+          "label_en": "Comfortable to use / drive (cabin and seats)"
+        },
+        {
+          "code": 206,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Mudah digunakan / dikendarai",
+          "label_en": "Easy to use / drive"
+        },
+        {
+          "code": 207,
+          "nett": "Produk  secara umum - Nett",
+          "label_id": "Tekonologinya canggih",
+          "label_en": "Advanced technology"
+        },
+        {
+          "code": 501,
+          "nett": "Kualitas & Performa Produk - Nett",
+          "label_id": "Perfroma masih biasa saja",
+          "label_en": "Performance is still average"
+        },
+        {
+          "code": 531,
+          "nett": "Harga dan Biaya - Nett",
+          "label_id": "Bahan bakarnya boros",
+          "label_en": "Fuel consumption is high"
+        },
+        {
+          "code": 551,
+          "nett": "Perawatan unit  - Nett",
+          "label_id": "Garansi kerusakannya kurang panjang",
+          "label_en": "Warranty coverage for damage is too short / insufficiently long"
+        }
+      ],
+      "verbatim_samples": [
+        {
+          "verbatim": "bagus",
+          "code": "191"
+        },
+        {
+          "verbatim": "bagus",
+          "code": "108"
+        },
+        {
+          "verbatim": "irit bahan bakar, awet spart part",
+          "code": "165;101"
+        },
+        {
+          "verbatim": "harganya sesuai dengan kualitas, irit bahan bakar",
+          "code": "162;165"
+        },
+        {
+          "verbatim": "dengan harga yang baik san kualitas yang baik sangat terpercaya",
+          "code": "162"
+        },
+        {
+          "verbatim": "dengan harga bagus dengan performa yang bagus dan tahan lama",
+          "code": "161;108;101"
+        },
+        {
+          "verbatim": "Bahan bakar yang irit",
+          "code": "165"
+        },
+        {
+          "verbatim": "Muatan yang besar",
+          "code": "105"
+        },
+        {
+          "verbatim": "Irit bahan bakar",
+          "code": "165"
+        },
+        {
+          "verbatim": "Mesin yang kuat",
+          "code": "102"
+        },
+        {
+          "verbatim": "Irit bahan bakar",
+          "code": "165"
+        },
+        {
+          "verbatim": "irit bahan bakar dan mesinya bertenaga",
+          "code": "165;110"
+        },
+        {
+          "verbatim": "harga jual tinggi dan jarang mengalami kerusakan",
+          "code": "164;101"
+        },
+        {
+          "verbatim": "Mesin irit dan bertenaga",
+          "code": "165;106"
+        },
+        {
+          "verbatim": "Kapasitas muatan optimal",
+          "code": "105"
+        },
+        {
+          "verbatim": "mesinya bandel, kapasitas muatanya besar, sukucadangnya mudah didapat dan terjangkau",
+          "code": "102;105;181;161"
+        },
+        {
+          "verbatim": "memberikan nilai baik",
+          "code": "102"
+        },
+        {
+          "verbatim": "performa mesin baik",
+          "code": "108"
+        },
+        {
+          "verbatim": "bengkel tersedia dimana mana",
+          "code": "187"
+        },
+        {
+          "verbatim": "Harga dan kualitas nya sesuai",
+          "code": "162"
+        },
+        {
+          "verbatim": "Mesin yang kuat",
+          "code": "102"
+        },
+        {
+          "verbatim": "Kapasitas yang besar",
+          "code": "105"
+        },
+        {
+          "verbatim": "Muatan banyak",
+          "code": "105"
+        },
+        {
+          "verbatim": "jaringan servicenya banyak_x000D_\nnilai jual kembali relatif tinggi",
+          "code": "187;164"
+        },
+        {
+          "verbatim": "performa mesin yg kuat dan irit bahan bakar",
+          "code": "102;165"
+        },
+        {
+          "verbatim": "harga jual nya masih tinggi",
+          "code": "164"
+        },
+        {
+          "verbatim": "nilai jual nya masih bagus,mesin awet",
+          "code": "164;101"
+        },
+        {
+          "verbatim": "kualitas mesin awet dan tahan",
+          "code": "101;102"
+        },
+        {
+          "verbatim": "kondisi mesin sangat bamdel",
+          "code": "102"
+        },
+        {
+          "verbatim": "harga jual tinggi_x000D_\nsukucadang mudah di dapat_x000D_\nbengkel resminya banyak",
+          "code": "164;181;187"
+        },
+        {
+          "verbatim": "mobilnya tangguh di jalan menanjak_x000D_\nbiaya oprasional nya terjangkau",
+          "code": "110;166"
+        },
+        {
+          "verbatim": "mobilnya tahan lama_x000D_\nkapasitas muatan besar",
+          "code": "101;105"
+        },
+        {
+          "verbatim": "tahan lama, kapasitas muatanya besar, harganya kompetitif",
+          "code": "101;105;167"
+        },
+        {
+          "verbatim": "Mesin yang tangguh",
+          "code": "102"
+        },
+        {
+          "verbatim": "Kapasitas yang luas",
+          "code": "105"
+        },
+        {
+          "verbatim": "Mesin diselnya irit dan tangguh",
+          "code": "165;102"
+        },
+        {
+          "verbatim": "Mesin yang kuat",
+          "code": "102"
+        },
+        {
+          "verbatim": "mobilnya kokoh  dan memiliki desain kekinian. kualitas lampunya di atas mobil biasanya",
+          "code": "113;191;115"
+        },
+        {
+          "verbatim": "Mesin yang bandel",
+          "code": "102"
+        },
+        {
+          "verbatim": "Jarang rusak",
+          "code": "101"
+        }
+      ]
+    },
+    {
+      "study_id": "Q9",
+      "topic": "Alasan tidak lagi merekomendasikan Listerine",
+      "question": "Q9. You mentioned that you previously recommended Listerine. Please tell us the reasons why you no longer recommend this brand.",
+      "type": "OE - Open Ended, single column, multi-code allowed",
+      "codelist": [
+        {
+          "code": "Kode",
+          "nett": "",
+          "label_id": "Keterangan",
+          "label_en": ""
+        },
+        {
+          "code": 101,
+          "nett": "Produk - Nett",
+          "label_id": "Produknya kurang bagus",
+          "label_en": "The product is not very good."
+        },
+        {
+          "code": 121,
+          "nett": "Kandungan Produk  - Nett",
+          "label_id": "Mengandung alkohol",
+          "label_en": "Contains alcohol."
+        },
+        {
+          "code": 131,
+          "nett": "Manfaat Produk - Nett",
+          "label_id": "Kurang terbukti dapat membunuh bakteri di mulut",
+          "label_en": "Less proven to kill bacteria in the mouth."
+        },
+        {
+          "code": 132,
+          "nett": "Manfaat Produk - Nett",
+          "label_id": "Membuat iritasi jaringan mulut yang sensitif",
+          "label_en": "Causes irritation to sensitive oral tissues."
+        },
+        {
+          "code": 133,
+          "nett": "Manfaat Produk - Nett",
+          "label_id": "Membuat mulut terasa kering",
+          "label_en": "Makes the mouth feel dry."
+        },
+        {
+          "code": 134,
+          "nett": "Manfaat Produk - Nett",
+          "label_id": "Kurang dapat mencegah gigi berlubang",
+          "label_en": "Less effective in preventing cavities."
+        },
+        {
+          "code": 135,
+          "nett": "Manfaat Produk - Nett",
+          "label_id": "Kurang dapat memberikan perlindungan harian pada gigi",
+          "label_en": "Less effective in providing daily protection for teeth."
+        },
+        {
+          "code": 151,
+          "nett": "Rasa Produk - Nett",
+          "label_id": "Rasanya tidak disukai pasien",
+          "label_en": "The taste is not liked by patients."
+        },
+        {
+          "code": 152,
+          "nett": "Rasa Produk - Nett",
+          "label_id": "Rasanya terlalu keras / kurang lembut di mulut",
+          "label_en": "The taste is too strong / not gentle enough in the mouth."
+        }
+      ],
+      "verbatim_samples": [
+        {
+          "verbatim": "karena merk lain misal minosep lebih terbukti membunuh bakteri karena kandungan chlorhexidine",
+          "code": "131"
+        },
+        {
+          "verbatim": "rasa obat kumur pasien tidak suka",
+          "code": "151"
+        },
+        {
+          "verbatim": "ada alkoholnya",
+          "code": "121"
+        },
+        {
+          "verbatim": "karena ada produk yang lebih baik lagi dari kandungannya",
+          "code": "101"
+        },
+        {
+          "verbatim": "krn mengandung alkohol,yg bisa mengiritasi jaringan mulut yg sensitif.",
+          "code": "121;132"
+        },
+        {
+          "verbatim": "dari pengalaman sendiri ketika berkumur itu dimulut rasanya seperti keras sekali dan mulut sedikit kering",
+          "code": "133;152"
+        }
+      ]
+    },
+    {
+      "study_id": "B4B5",
+      "topic": "Top of Mind / Spontaneous Awareness - platform top-up game",
+      "question": "B4/B5. Nama platform jasa top up game yang terlintas di pikiran",
+      "type": "TOM - Spontaneous Brand Awareness, kode = nomor brand, single code per kolom",
+      "codelist": [
+        {
+          "code": "Kode",
+          "nett": "",
+          "label_id": "Keterangan",
+          "label_en": "Keterangan"
+        },
+        {
+          "code": 1,
+          "nett": "",
+          "label_id": "GoPay Games",
+          "label_en": "GoPay Games"
+        },
+        {
+          "code": 2,
+          "nett": "",
+          "label_id": "Codashop",
+          "label_en": "Codashop"
+        },
+        {
+          "code": 3,
+          "nett": "",
+          "label_id": "Dana Games",
+          "label_en": "Dana Games"
+        },
+        {
+          "code": 4,
+          "nett": "",
+          "label_id": "Unipin",
+          "label_en": "Unipin"
+        },
+        {
+          "code": 5,
+          "nett": "",
+          "label_id": "Itemku",
+          "label_en": "Itemku"
+        },
+        {
+          "code": 6,
+          "nett": "",
+          "label_id": "LapakGaming",
+          "label_en": "LapakGaming"
+        },
+        {
+          "code": 7,
+          "nett": "",
+          "label_id": "Tokogame",
+          "label_en": "Tokogame"
+        },
+        {
+          "code": 8,
+          "nett": "",
+          "label_id": "Takapedia",
+          "label_en": "Takapedia"
+        },
+        {
+          "code": 9,
+          "nett": "",
+          "label_id": "Xcashshop",
+          "label_en": "Xcashshop"
+        },
+        {
+          "code": 10,
+          "nett": "",
+          "label_id": "Razer Gold",
+          "label_en": "Razer Gold"
+        },
+        {
+          "code": 11,
+          "nett": "",
+          "label_id": "Gogogo",
+          "label_en": "Gogogo"
+        },
+        {
+          "code": 12,
+          "nett": "",
+          "label_id": "Mobapay",
+          "label_en": "Mobapay"
+        },
+        {
+          "code": 13,
+          "nett": "",
+          "label_id": "kiosgamer",
+          "label_en": "kiosgamer"
+        },
+        {
+          "code": 14,
+          "nett": "",
+          "label_id": "VYGaming",
+          "label_en": "VYGaming"
+        },
+        {
+          "code": 15,
+          "nett": "",
+          "label_id": "Langsung di game (Google Playstore/ Apple App store)",
+          "label_en": "Langsung di game (Google Playstore/ Apple App store)"
+        },
+        {
+          "code": 16,
+          "nett": "",
+          "label_id": "Vocagame",
+          "label_en": "Vocagame"
+        },
+        {
+          "code": 17,
+          "nett": "",
+          "label_id": "Dunia Games",
+          "label_en": "Dunia Games"
+        },
+        {
+          "code": 18,
+          "nett": "",
+          "label_id": "BangJeff",
+          "label_en": "BangJeff"
+        },
+        {
+          "code": 19,
+          "nett": "",
+          "label_id": "Kepo.id",
+          "label_en": "Kepo.id"
+        },
+        {
+          "code": 20,
+          "nett": "",
+          "label_id": "Ourastore",
+          "label_en": "Ourastore"
+        },
+        {
+          "code": 21,
+          "nett": "",
+          "label_id": "A+ Rewards",
+          "label_en": "A+ Rewards"
+        },
+        {
+          "code": 22,
+          "nett": "",
+          "label_id": "Seller di X/ whatsapp",
+          "label_en": "Seller di X/ whatsapp"
+        },
+        {
+          "code": 98,
+          "nett": "",
+          "label_id": "Lainnya, sebutkan___",
+          "label_en": "Lainnya, sebutkan___"
+        },
+        {
+          "code": 24,
+          "nett": "",
+          "label_id": "Aoshi Market",
+          "label_en": "Aoshi Market"
+        },
+        {
+          "code": 25,
+          "nett": "",
+          "label_id": "Arena Topup",
+          "label_en": "Arena Topup"
+        },
+        {
+          "code": 27,
+          "nett": "",
+          "label_id": "Bang Pascol ID",
+          "label_en": "Bang Pascol ID"
+        },
+        {
+          "code": 28,
+          "nett": "",
+          "label_id": "BKENTSTORE (Brandon Kent)",
+          "label_en": "BKENTSTORE (Brandon Kent)"
+        },
+        {
+          "code": 29,
+          "nett": "",
+          "label_id": "Deyu store",
+          "label_en": "Deyu store"
+        },
+        {
+          "code": 30,
+          "nett": "",
+          "label_id": "Dongkak",
+          "label_en": "Dongkak"
+        },
+        {
+          "code": 31,
+          "nett": "",
+          "label_id": "Donkey Gendut Store",
+          "label_en": "Donkey Gendut Store"
+        },
+        {
+          "code": 32,
+          "nett": "",
+          "label_id": "Empe Shop",
+          "label_en": "Empe Shop"
+        },
+        {
+          "code": 33,
+          "nett": "",
+          "label_id": "Evos Top Up",
+          "label_en": "Evos Top Up"
+        },
+        {
+          "code": 34,
+          "nett": "",
+          "label_id": "Fastpay",
+          "label_en": "Fastpay"
+        },
+        {
+          "code": 35,
+          "nett": "",
+          "label_id": "Garudaku",
+          "label_en": "Garudaku"
+        },
+        {
+          "code": 36,
+          "nett": "",
+          "label_id": "Gila Sanz",
+          "label_en": "Gila Sanz"
+        },
+        {
+          "code": 37,
+          "nett": "",
+          "label_id": "Goc.id",
+          "label_en": "Goc.id"
+        },
+        {
+          "code": 38,
+          "nett": "",
+          "label_id": "Golroblox",
+          "label_en": "Golroblox"
+        },
+        {
+          "code": 39,
+          "nett": "",
+          "label_id": "Hiddengame",
+          "label_en": "Hiddengame"
+        },
+        {
+          "code": 40,
+          "nett": "",
+          "label_id": "Indotel",
+          "label_en": "Indotel"
+        },
+        {
+          "code": 41,
+          "nett": "",
+          "label_id": "MbongShop",
+          "label_en": "MbongShop"
+        },
+        {
+          "code": 42,
+          "nett": "",
+          "label_id": "Jollymax",
+          "label_en": "Jollymax"
+        },
+        {
+          "code": 43,
+          "nett": "",
+          "label_id": "Kachishop",
+          "label_en": "Kachishop"
+        },
+        {
+          "code": 44,
+          "nett": "",
+          "label_id": "Leherstore",
+          "label_en": "Leherstore"
+        },
+        {
+          "code": 45,
+          "nett": "",
+          "label_id": "Lemontopup.id",
+          "label_en": "Lemontopup.id"
+        },
+        {
+          "code": 46,
+          "nett": "",
+          "label_id": "Lootbar.gg",
+          "label_en": "Lootbar.gg"
+        },
+        {
+          "code": 47,
+          "nett": "",
+          "label_id": "Marvel Store",
+          "label_en": "Marvel Store"
+        },
+        {
+          "code": 48,
+          "nett": "",
+          "label_id": "Mbah Gaming",
+          "label_en": "Mbah Gaming"
+        },
+        {
+          "code": 49,
+          "nett": "",
+          "label_id": "Midas Buy",
+          "label_en": "Midas Buy"
+        },
+        {
+          "code": 50,
+          "nett": "",
+          "label_id": "SEAGM",
+          "label_en": "SEAGM"
+        },
+        {
+          "code": 51,
+          "nett": "",
+          "label_id": "Mobo Game Shop",
+          "label_en": "Mobo Game Shop"
+        },
+        {
+          "code": 52,
+          "nett": "",
+          "label_id": "Mocipay",
+          "label_en": "Mocipay"
+        },
+        {
+          "code": 53,
+          "nett": "",
+          "label_id": "Top Up No limit",
+          "label_en": "Top Up No limit"
+        },
+        {
+          "code": 54,
+          "nett": "",
+          "label_id": "Pip Gaming Store",
+          "label_en": "Pip Gaming Store"
+        },
+        {
+          "code": 55,
+          "nett": "",
+          "label_id": "Pixel Game",
+          "label_en": "Pixel Game"
+        },
+        {
+          "code": 56,
+          "nett": "",
+          "label_id": "Point go",
+          "label_en": "Point go"
+        },
+        {
+          "code": 57,
+          "nett": "",
+          "label_id": "R7 Store",
+          "label_en": "R7 Store"
+        },
+        {
+          "code": 58,
+          "nett": "",
+          "label_id": "Radja Top up",
+          "label_en": "Radja Top up"
+        },
+        {
+          "code": 59,
+          "nett": "",
+          "label_id": "Rapspoint",
+          "label_en": "Rapspoint"
+        },
+        {
+          "code": 60,
+          "nett": "",
+          "label_id": "Skylar top up",
+          "label_en": "Skylar top up"
+        },
+        {
+          "code": 61,
+          "nett": "",
+          "label_id": "Tokojot",
+          "label_en": "Tokojot"
+        },
+        {
+          "code": 62,
+          "nett": "",
+          "label_id": "UPOINT.ID",
+          "label_en": "UPOINT.ID"
+        },
+        {
+          "code": 63,
+          "nett": "",
+          "label_id": "Veinstore",
+          "label_en": "Veinstore"
+        },
+        {
+          "code": 64,
+          "nett": "",
+          "label_id": "Windah Top Up",
+          "label_en": "Windah Top Up"
+        },
+        {
+          "code": 65,
+          "nett": "",
+          "label_id": "Kios Top Up",
+          "label_en": "Kios Top Up"
+        },
+        {
+          "code": 66,
+          "nett": "",
+          "label_id": "Juragan Store",
+          "label_en": "Juragan Store"
+        },
+        {
+          "code": 67,
+          "nett": "",
+          "label_id": "BP GameStore",
+          "label_en": "BP GameStore"
+        },
+        {
+          "code": 68,
+          "nett": "",
+          "label_id": "Eightstore",
+          "label_en": "Eightstore"
+        },
+        {
+          "code": 69,
+          "nett": "",
+          "label_id": "Gamefinity",
+          "label_en": "Gamefinity"
+        },
+        {
+          "code": 70,
+          "nett": "",
+          "label_id": "Mayoblox / BocilMayo",
+          "label_en": "Mayoblox / BocilMayo"
+        },
+        {
+          "code": 71,
+          "nett": "",
+          "label_id": "Meppo Store",
+          "label_en": "Meppo Store"
+        },
+        {
+          "code": 73,
+          "nett": "",
+          "label_id": "RRQ Top Up",
+          "label_en": "RRQ Top Up"
+        },
+        {
+          "code": 74,
+          "nett": "",
+          "label_id": "TOPUP live",
+          "label_en": "TOPUP live"
+        },
+        {
+          "code": 75,
+          "nett": "",
+          "label_id": "GGWPTop Up",
+          "label_en": "GGWPTop Up"
+        },
+        {
+          "code": 76,
+          "nett": "",
+          "label_id": "TopUpGim",
+          "label_en": "TopUpGim"
+        },
+        {
+          "code": 77,
+          "nett": "",
+          "label_id": "Goatcoins",
+          "label_en": "Goatcoins"
+        },
+        {
+          "code": 78,
+          "nett": "",
+          "label_id": "Digicodes.net",
+          "label_en": "Digicodes.net"
+        },
+        {
+          "code": 79,
+          "nett": "",
+          "label_id": "G2G (Gamer2Gamer)",
+          "label_en": "G2G (Gamer2Gamer)"
+        },
+        {
+          "code": 80,
+          "nett": "",
+          "label_id": "Gamestone",
+          "label_en": "Gamestone"
+        },
+        {
+          "code": 81,
+          "nett": "",
+          "label_id": "Johen Store",
+          "label_en": "Johen Store"
+        },
+        {
+          "code": 82,
+          "nett": "",
+          "label_id": "Kurohiko",
+          "label_en": "Kurohiko"
+        },
+        {
+          "code": 83,
+          "nett": "",
+          "label_id": "Lumos Diamond",
+          "label_en": "Lumos Diamond"
+        },
+        {
+          "code": 84,
+          "nett": "",
+          "label_id": "Toko Valorant",
+          "label_en": "Toko Valorant"
+        },
+        {
+          "code": 85,
+          "nett": "",
+          "label_id": "TOPUPin",
+          "label_en": "TOPUPin"
+        },
+        {
+          "code": 86,
+          "nett": "",
+          "label_id": "Topup Game Store",
+          "label_en": "Topup Game Store"
+        },
+        {
+          "code": 87,
+          "nett": "",
+          "label_id": "Upgaming Store",
+          "label_en": "Upgaming Store"
+        },
+        {
+          "code": 88,
+          "nett": "",
+          "label_id": "Xinn Store",
+          "label_en": "Xinn Store"
+        },
+        {
+          "code": 89,
+          "nett": "",
+          "label_id": "ZeusX",
+          "label_en": "ZeusX"
+        },
+        {
+          "code": 91,
+          "nett": "",
+          "label_id": "Buxstore",
+          "label_en": "Buxstore"
+        },
+        {
+          "code": 92,
+          "nett": "",
+          "label_id": "Clay Top Up",
+          "label_en": "Clay Top Up"
+        },
+        {
+          "code": 93,
+          "nett": "",
+          "label_id": "Topup.id",
+          "label_en": "Topup.id"
+        },
+        {
+          "code": 94,
+          "nett": "",
+          "label_id": "Game Squad",
+          "label_en": "Game Squad"
+        },
+        {
+          "code": 95,
+          "nett": "",
+          "label_id": "Kulgar Diamond",
+          "label_en": "Kulgar Diamond"
+        },
+        {
+          "code": 96,
+          "nett": "",
+          "label_id": "Toko Markocop",
+          "label_en": "Toko Markocop"
+        },
+        {
+          "code": 103,
+          "nett": "",
+          "label_id": "Sip Shop",
+          "label_en": "Sip Shop"
+        },
+        {
+          "code": 104,
+          "nett": "",
+          "label_id": "Topupori",
+          "label_en": "Topupori"
+        },
+        {
+          "code": 107,
+          "nett": "",
+          "label_id": "Wannstore",
+          "label_en": "Wannstore"
+        },
+        {
+          "code": 111,
+          "nett": "",
+          "label_id": "Ditusi",
+          "label_en": "Ditusi"
+        },
+        {
+          "code": 112,
+          "nett": "",
+          "label_id": "Jajan Games",
+          "label_en": "Jajan Games"
+        },
+        {
+          "code": 113,
+          "nett": "",
+          "label_id": "Lapak Huda",
+          "label_en": "Lapak Huda"
+        },
+        {
+          "code": 114,
+          "nett": "",
+          "label_id": "Pasar Games",
+          "label_en": "Pasar Games"
+        },
+        {
+          "code": 116,
+          "nett": "",
+          "label_id": "Siwa Store",
+          "label_en": "Siwa Store"
+        },
+        {
+          "code": 117,
+          "nett": "",
+          "label_id": "Sabishop Gaming",
+          "label_en": "Sabishop Gaming"
+        },
+        {
+          "code": 118,
+          "nett": "",
+          "label_id": "Sekte Topup",
+          "label_en": "Sekte Topup"
+        },
+        {
+          "code": 119,
+          "nett": "",
+          "label_id": "Topupdeh.id",
+          "label_en": "Topupdeh.id"
+        },
+        {
+          "code": 120,
+          "nett": "",
+          "label_id": "TopupKuy",
+          "label_en": "TopupKuy"
+        },
+        {
+          "code": 121,
+          "nett": "",
+          "label_id": "Topupcepat",
+          "label_en": "Topupcepat"
+        },
+        {
+          "code": 122,
+          "nett": "",
+          "label_id": "Tokowendigg.com (WEND-IGG)",
+          "label_en": "Tokowendigg.com (WEND-IGG)"
+        },
+        {
+          "code": 123,
+          "nett": "",
+          "label_id": "Poizy store",
+          "label_en": "Poizy store"
+        },
+        {
+          "code": 124,
+          "nett": "",
+          "label_id": "Rozez Shop",
+          "label_en": "Rozez Shop"
+        },
+        {
+          "code": 125,
+          "nett": "",
+          "label_id": "Saldo Game",
+          "label_en": "Saldo Game"
+        },
+        {
+          "code": 127,
+          "nett": "",
+          "label_id": "Tara Arts Top Up",
+          "label_en": "Tara Arts Top Up"
+        }
+      ],
+      "verbatim_samples": [
+        {
+          "verbatim": "UniPin",
+          "code": "4"
+        },
+        {
+          "verbatim": "Itemku",
+          "code": "5"
+        },
+        {
+          "verbatim": "Codashop",
+          "code": "2"
+        },
+        {
+          "verbatim": "Lapak Gaming",
+          "code": "6"
+        },
+        {
+          "verbatim": "Unipin",
+          "code": "4"
+        },
+        {
+          "verbatim": "Gopay",
+          "code": "1"
+        },
+        {
+          "verbatim": "Grab gift",
+          "code": "99"
+        },
+        {
+          "verbatim": "Codashop",
+          "code": "2"
+        },
+        {
+          "verbatim": "Codashop",
+          "code": "2"
+        },
+        {
+          "verbatim": "Oura store",
+          "code": "20"
+        },
+        {
+          "verbatim": "Lapak gaming",
+          "code": "6"
+        },
+        {
+          "verbatim": "Dana",
+          "code": "3"
+        },
+        {
+          "verbatim": "Gopay",
+          "code": "1"
+        },
+        {
+          "verbatim": "Uni Pin",
+          "code": "4"
+        },
+        {
+          "verbatim": "Unipin",
+          "code": "4"
+        },
+        {
+          "verbatim": "Codashop",
+          "code": "2"
+        },
+        {
+          "verbatim": "Dunigames",
+          "code": "17"
+        },
+        {
+          "verbatim": "Itemku",
+          "code": "5"
+        },
+        {
+          "verbatim": "Lapak gaming",
+          "code": "6"
+        },
+        {
+          "verbatim": "Kios gamer",
+          "code": "13"
+        },
+        {
+          "verbatim": "codashop",
+          "code": "2"
+        },
+        {
+          "verbatim": "codashop",
+          "code": "2"
+        },
+        {
+          "verbatim": "topupgims",
+          "code": "86"
+        },
+        {
+          "verbatim": "gopay games",
+          "code": "1"
+        },
+        {
+          "verbatim": "Dana",
+          "code": "3"
+        },
+        {
+          "verbatim": "Gopay",
+          "code": "1"
+        },
+        {
+          "verbatim": "Ovo",
+          "code": "99"
+        },
+        {
+          "verbatim": "oura store,",
+          "code": "20"
+        },
+        {
+          "verbatim": "oura store",
+          "code": "20"
+        },
+        {
+          "verbatim": "dunia games",
+          "code": "17"
+        },
+        {
+          "verbatim": "UniPin",
+          "code": "4"
+        },
+        {
+          "verbatim": "Codashop",
+          "code": "2"
+        },
+        {
+          "verbatim": "Dana",
+          "code": "3"
+        },
+        {
+          "verbatim": "Gopay",
+          "code": "1"
+        },
+        {
+          "verbatim": "Playstore",
+          "code": "15"
+        },
+        {
+          "verbatim": "Garena",
+          "code": "15"
+        },
+        {
+          "verbatim": "Playstore",
+          "code": "15"
+        },
+        {
+          "verbatim": "Apps purchase",
+          "code": "99"
+        },
+        {
+          "verbatim": "Lapakgaming",
+          "code": "6"
+        },
+        {
+          "verbatim": "Unipin",
+          "code": "4"
+        }
+      ],
+      "note": "Verbatim adalah nama brand yang disebut responden, kode adalah ID brand. Variasi ejaan (Codashop/codashop/CODASHOP) semua diberi kode sama."
+    },
+    {
+      "study_id": "G8",
+      "topic": "Saran perbaikan GoPay Games",
+      "question": "G8. Apa yang bisa kami perbaiki agar Anda lebih tertarik untuk top up di GoPay Games?",
+      "type": "OE - Open Ended, multi-code allowed, 999 = tidak ada saran",
+      "codelist": [
+        {
+          "code": "Kode",
+          "nett": "",
+          "label_id": "Keterangan",
+          "label_en": ""
+        },
+        {
+          "code": 101,
+          "nett": "",
+          "label_id": "Perbanyak pilihan games menarik",
+          "label_en": "Increase the variety of games"
+        },
+        {
+          "code": 102,
+          "nett": "",
+          "label_id": "Tambahkan fitur gamesnya",
+          "label_en": "Add more game features"
+        },
+        {
+          "code": 103,
+          "nett": "",
+          "label_id": "Tingkatkan fiturnya",
+          "label_en": "Improve existing features"
+        },
+        {
+          "code": 104,
+          "nett": "",
+          "label_id": "Agar selalu cepat untuk mengupdate games terbaru",
+          "label_en": "Make sure the games is always up to date"
+        },
+        {
+          "code": 106,
+          "nett": "",
+          "label_id": "Fitur di Gopay Games dibuat lebih menarik",
+          "label_en": "Features in GoPay Games should be made more engaging."
+        },
+        {
+          "code": 107,
+          "nett": "",
+          "label_id": "Perbanyak item games yang unik",
+          "label_en": "Add more unique game items."
+        },
+        {
+          "code": 110,
+          "nett": "",
+          "label_id": "Pilihan nominal top up agar lebih lengkap",
+          "label_en": "Expand the top-up denomination options."
+        },
+        {
+          "code": 112,
+          "nett": "",
+          "label_id": "Ada fitur refund saat transaksi gagal",
+          "label_en": "There is a refund feature available when a transaction fails."
+        },
+        {
+          "code": 121,
+          "nett": "",
+          "label_id": "Permudah transaksi top up",
+          "label_en": "Simplify top-up transactions"
+        },
+        {
+          "code": 122,
+          "nett": "",
+          "label_id": "Percepat transaksi top up",
+          "label_en": "Faster top-up transactions"
+        },
+        {
+          "code": 123,
+          "nett": "",
+          "label_id": "Lebih tepat dalam melakukan transaksi",
+          "label_en": "Improve transaction accuracy"
+        },
+        {
+          "code": 124,
+          "nett": "",
+          "label_id": "Metode pembayaran agar ditingkatkan",
+          "label_en": "Enhance payment methods"
+        },
+        {
+          "code": 126,
+          "nett": "",
+          "label_id": "Perbanyak pilihan metode pembayaran saat top up",
+          "label_en": "Provide more payment method options for top-up transactions."
+        },
+        {
+          "code": 127,
+          "nett": "",
+          "label_id": "Saat pemotongan saldo  agar jumlah  item game langsung terdeteksi di game",
+          "label_en": "When the balance is deducted, ensure that the purchased game items are immediately reflected and detected in the game."
+        },
+        {
+          "code": 214,
+          "nett": "",
+          "label_id": "Tambahkan detail syarat dan ketentuan saat melakukan top up",
+          "label_en": "Provide more detailed terms and conditions during the top-up process."
+        },
+        {
+          "code": 141,
+          "nett": "",
+          "label_id": "Login di permudah",
+          "label_en": "Simplify the login process"
+        },
+        {
+          "code": 142,
+          "nett": "",
+          "label_id": "Aplikasi dan item games agar  diperbaiki biar  tidak sering eror / delay",
+          "label_en": "Fix app and in-game item issues to reduce errors or delays"
+        },
+        {
+          "code": 143,
+          "nett": "",
+          "label_id": "Proses top up dipercepat",
+          "label_en": "Faster top-up process"
+        },
+        {
+          "code": 144,
+          "nett": "",
+          "label_id": "Agar  dapat menjaga sistemnya berjalan lebih optimal",
+          "label_en": "Ensure the system runs more optimally"
+        },
+        {
+          "code": 145,
+          "nett": "",
+          "label_id": "Navigasi aplikasi agar lebih cepat dan lengkap",
+          "label_en": "Improve app navigation to be faster and more comprehensive"
+        },
+        {
+          "code": 146,
+          "nett": "",
+          "label_id": "Agar aplikasi selalu up to date",
+          "label_en": "Keep the app always up to date"
+        },
+        {
+          "code": 147,
+          "nett": "",
+          "label_id": "Aplikasi agar dicek secara berkala",
+          "label_en": "Conduct regular app maintenance"
+        },
+        {
+          "code": 148,
+          "nett": "",
+          "label_id": "Agar mengurangi penggunaan AI dalam chat",
+          "label_en": "Reduce the use of AI in customer support chats."
+        },
+        {
+          "code": 149,
+          "nett": "",
+          "label_id": "Tambahkan riwayat top up agar mudah untuk top up ulang",
+          "label_en": "Add a top-up history feature to make repeat top-ups easier."
+        },
+        {
+          "code": 150,
+          "nett": "",
+          "label_id": "Verifikasi agar dipermudah",
+          "label_en": "Simplify the verification process."
+        },
+        {
+          "code": 151,
+          "nett": "",
+          "label_id": "Semua performa aplikasi agar diperbaharui",
+          "label_en": "Improve and update the overall performance of the application."
+        },
+        {
+          "code": 161,
+          "nett": "",
+          "label_id": "Perbaiki jaringan dan server agar lebih cepat",
+          "label_en": "Improve network and server speed"
+        },
+        {
+          "code": 162,
+          "nett": "",
+          "label_id": "Perbaiki jaringan  dan server agar lebih lancar / tidak sering eror / tidak bermasalah saat pembayaran / top up",
+          "label_en": "Improve network and server stability to avoid errors and issues, especially during payment or top-up"
+        },
+        {
+          "code": 171,
+          "nett": "",
+          "label_id": "Kualitas pelayanan ditingkatkan",
+          "label_en": "Improve service quality"
+        },
+        {
+          "code": 172,
+          "nett": "",
+          "label_id": "Penanganan keluhan agar lebih cepat dan baik",
+          "label_en": "Handle complaints more quickly and effectively"
+        },
+        {
+          "code": 173,
+          "nett": "",
+          "label_id": "Permudah dalam  melakukan pengembalian dana / refund",
+          "label_en": "Simplify the refund process"
+        },
+        {
+          "code": 174,
+          "nett": "",
+          "label_id": "Percepat pengembalian dana / refund",
+          "label_en": "Faster refunds process"
+        },
+        {
+          "code": 175,
+          "nett": "",
+          "label_id": "CS yang lebih responsif / cepat tanggap terhadap keluhan customer",
+          "label_en": "More responsive CS"
+        },
+        {
+          "code": 181,
+          "nett": "",
+          "label_id": "Harga top up dibuat lebih murah / terjangkau",
+          "label_en": "More affordable price"
+        },
+        {
+          "code": 182,
+          "nett": "",
+          "label_id": "Harganya dibuat lebih kompetitif / bersaing dengan yang lain",
+          "label_en": "Ensure prices are more competitive"
+        },
+        {
+          "code": 183,
+          "nett": "",
+          "label_id": "Harganya dibuat lebih variasi",
+          "label_en": "Provide more pricing variations"
+        },
+        {
+          "code": 191,
+          "nett": "",
+          "label_id": "Keamanan top up ditingkatkan",
+          "label_en": "Enhance top-up security"
+        },
+        {
+          "code": 192,
+          "nett": "",
+          "label_id": "Agar lebih amanah",
+          "label_en": "Improve overall reliability and safety"
+        },
+        {
+          "code": 201,
+          "nett": "",
+          "label_id": "Perbanyak iklan / promosi penawaran produk menarik  (seperti : diskon pengguna setia, cashback, bonus kuota, bonus diamond dan skin, reward, hadiah menarik,bundling top up, flash sale, promo perbankan,sistem point yang bisa ditukar dengan bonus top up,...dll)",
+          "label_en": "Increase attractive promotions (discounts for loyal users, cashback, bonus quota, bonus diamonds and skins, rewards, giveaways, bundling top-ups, flash sales, bank promotions, etc.)"
+        },
+        {
+          "code": 202,
+          "nett": "",
+          "label_id": "Rutin melakukan promosi",
+          "label_en": "Add promotions regularly"
+        },
+        {
+          "code": 203,
+          "nett": "",
+          "label_id": "Desain iklannya diperbagus",
+          "label_en": "Improve ad design"
+        },
+        {
+          "code": 204,
+          "nett": "",
+          "label_id": "Ada paket top up hemat",
+          "label_en": "Provide more budget-friendly top-up packages"
+        },
+        {
+          "code": 205,
+          "nett": "",
+          "label_id": "Agar voucher dapat sering  berfungsi saat digunakan",
+          "label_en": "Ensure vouchers work properly when used"
+        },
+        {
+          "code": 206,
+          "nett": "",
+          "label_id": "Permudah syarat pemberian hadiah menarik",
+          "label_en": "Simplify requirements to receive rewards"
+        },
+        {
+          "code": 207,
+          "nett": "",
+          "label_id": "Agar dapat menghilangkan iklan pada aplikasi",
+          "label_en": "Provide an option to remove ads in the app"
+        },
+        {
+          "code": 208,
+          "nett": "",
+          "label_id": "Tambahkan point ke pelanggan apabila mengajak teman untuk top up",
+          "label_en": "Add referral points when inviting friends to top up"
+        },
+        {
+          "code": 209,
+          "nett": "",
+          "label_id": "Agar cashback dapat sering berfungsi saat digunakan",
+          "label_en": "Ensure cashback works properly when used"
+        },
+        {
+          "code": 210,
+          "nett": "",
+          "label_id": "Adakan turnamen mini / e-sport games untuk menarik customer",
+          "label_en": "Hold tournaments or e-sports events to attract customers."
+        },
+        {
+          "code": 211,
+          "nett": "",
+          "label_id": "Periode promo agar diperjelas",
+          "label_en": "Make the promo period clearer."
+        },
+        {
+          "code": 212,
+          "nett": "",
+          "label_id": "Ada top up tanpa biaya admin",
+          "label_en": "Offer top-ups with no admin fee."
+        },
+        {
+          "code": 215,
+          "nett": "",
+          "label_id": "Agar promo disesuaikan dengan games yang sering dimainkan",
+          "label_en": "Customize promotions based on the games users play most frequently."
+        },
+        {
+          "code": 216,
+          "nett": "",
+          "label_id": "Tingkatkan event-event berhadiah",
+          "label_en": "Increase the number of reward-based events and promotions."
+        },
+        {
+          "code": 213,
+          "nett": "",
+          "label_id": "Agar ditambahkan rating dan ulasan yang bagus dari pengguna",
+          "label_en": "Add user ratings and reviews to help build trust and provide better information for users."
+        },
+        {
+          "code": 999,
+          "nett": "",
+          "label_id": "Tidak ada / Semua sudah baik",
+          "label_en": "None / Everything is already good"
+        }
+      ],
+      "verbatim_samples": [
+        {
+          "verbatim": "Tidak ada kendala reward cashback",
+          "code": "999"
+        },
+        {
+          "verbatim": "Perbanyak game yang bisa dibayar",
+          "code": "101"
+        },
+        {
+          "verbatim": "Promo yang lebih spesifik",
+          "code": "201"
+        },
+        {
+          "verbatim": "prosesnya lebih cepat",
+          "code": "143"
+        },
+        {
+          "verbatim": "Tidak ada, semua sudah baik",
+          "code": "999"
+        },
+        {
+          "verbatim": "Lebih murah dan cepat",
+          "code": "143;181"
+        },
+        {
+          "verbatim": "Buat lebih banyak kesempatan untuk dapet hadiahnya",
+          "code": "201"
+        },
+        {
+          "verbatim": "Lebih banyak potongan harga atau cashback",
+          "code": "201"
+        },
+        {
+          "verbatim": "Mungkin agen bisa diperbanyak. Jika perlu mengurangi penggunaan ai dalan chat",
+          "code": ";148"
+        },
+        {
+          "verbatim": "tidak ada, saya masih tertarik",
+          "code": "999"
+        },
+        {
+          "verbatim": "Adanya voucher diskon atau cashback gopay koin",
+          "code": "201"
+        },
+        {
+          "verbatim": "Ranting dan ulasan yah bagus",
+          "code": "213"
+        },
+        {
+          "verbatim": "Perbanyak variasi gamenya, berikan harga yang setidaknya bersaing dengan platform top up milik influencer",
+          "code": "182;101"
+        },
+        {
+          "verbatim": "Kode kupon yg akurat",
+          "code": "123"
+        },
+        {
+          "verbatim": "Tidak ada yang mau diperbaiki",
+          "code": "999"
+        },
+        {
+          "verbatim": "Nominal yang bisa kurang dari 10 ribu",
+          "code": "181"
+        },
+        {
+          "verbatim": "Lebih banyak bonus",
+          "code": "201"
+        },
+        {
+          "verbatim": "Di tingkatkan lagi free free nya",
+          "code": "201"
+        },
+        {
+          "verbatim": "Diperbaiki lagi aplikasinya",
+          "code": "142"
+        },
+        {
+          "verbatim": "Tidak ada lagi",
+          "code": "999"
+        },
+        {
+          "verbatim": "Tidak ada lagi",
+          "code": "999"
+        },
+        {
+          "verbatim": "Sering ada promo diskon",
+          "code": "202"
+        },
+        {
+          "verbatim": "Promonya lebih menarik lagi",
+          "code": "201"
+        }
+      ]
+    }
+  ]
+}
