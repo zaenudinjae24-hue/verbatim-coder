@@ -383,11 +383,6 @@ if st.session_state.step == "upload":
     col1, col2 = st.columns([2, 1])
     with col1:
         uploaded = st.file_uploader("Upload file Excel (.xlsx) berisi data verbatim", type=["xlsx"])
-        question_ctx = st.text_area(
-            "📝 Konteks pertanyaan (wajib diisi)",
-            placeholder="Contoh: D2. Apa alasan Anda memilih kendaraan ini? / What is the reason you chose this vehicle?",
-            height=80
-        )
         language = st.selectbox(
             "🌐 Bahasa output label",
             ["Bilingual (ID + EN)", "Indonesia saja", "Inggris saja"]
@@ -402,7 +397,7 @@ if st.session_state.step == "upload":
         - Sheet aktif = data
         """)
 
-    if uploaded and question_ctx:
+    if uploaded:
         try:
             df = pd.read_excel(uploaded)
             st.success(f"✓ File berhasil dibaca: {df.shape[0]} baris, {df.shape[1]} kolom")
@@ -410,7 +405,6 @@ if st.session_state.step == "upload":
 
             if st.button("▶️ Lanjut Pilih Kolom", type="primary", use_container_width=True):
                 st.session_state.df_raw = df
-                st.session_state.question_context = question_ctx
                 st.session_state.language = language
                 st.session_state.step = "select_cols"
                 st.rerun()
@@ -425,38 +419,61 @@ elif st.session_state.step == "select_cols":
     df = st.session_state.df_raw
     all_cols = list(df.columns)
 
-    st.info("Pilih kolom verbatim yang akan di-coding. Kolom yang satu **Kategori/Nett** yang sama bisa digabung (share 1 codeframe).")
+    st.info("Setiap **Grup** = satu topik/kategori yang share 1 codeframe. Bisa tambah beberapa grup untuk topik berbeda dalam 1 file.")
 
-    st.markdown("### Tambahkan Grup Kolom")
-
-    if "col_groups_builder" not in st.session_state:
+    # Init builder
+    if "col_groups_builder" not in st.session_state or st.session_state.col_groups_builder is None:
         st.session_state.col_groups_builder = []
 
-    with st.form("add_group_form"):
-        col_a, col_b = st.columns([2, 1])
-        with col_a:
-            selected_cols = st.multiselect("Pilih kolom verbatim", all_cols)
-        with col_b:
-            group_name = st.text_input("Nama Kategori/Nett", placeholder="Contoh: Kategori 1")
-        add_btn = st.form_submit_button("➕ Tambah Grup")
+    # Form tambah grup baru
+    st.markdown("### ➕ Tambah Grup Baru")
+    with st.container(border=True):
+        grp_name = st.text_input("Nama Kategori/Nett", placeholder="Contoh: Alasan Memilih Brand", key="grp_name_input")
+        grp_cols = st.multiselect("Pilih kolom verbatim untuk grup ini", all_cols, key="grp_cols_input")
+        grp_ctx  = st.text_area(
+            "Konteks pertanyaan untuk grup ini",
+            placeholder="Contoh: Q5. Apa alasan Anda memilih brand ini? / Why did you choose this brand?",
+            height=70,
+            key="grp_ctx_input"
+        )
+        grp_mode = st.radio(
+            "Mode generate codeframe",
+            ["⚡ CEPAT — sampel 150 verbatim (cukup untuk data homogen)",
+             "🔍 LENGKAP — baca semua verbatim per batch (lebih akurat, lebih lambat)"],
+            key="grp_mode_input"
+        )
 
-    if add_btn and selected_cols and group_name:
-        st.session_state.col_groups_builder.append({
-            "name": group_name,
-            "columns": selected_cols
-        })
-        st.rerun()
+        if st.button("✅ Tambah Grup", type="primary"):
+            if not grp_name:
+                st.error("Nama kategori wajib diisi!")
+            elif not grp_cols:
+                st.error("Pilih minimal 1 kolom verbatim!")
+            elif not grp_ctx:
+                st.error("Konteks pertanyaan wajib diisi agar AI lebih akurat!")
+            else:
+                st.session_state.col_groups_builder.append({
+                    "name": grp_name,
+                    "columns": grp_cols,
+                    "context": grp_ctx,
+                    "mode": "fast" if "CEPAT" in grp_mode else "full"
+                })
+                st.rerun()
 
+    # Tampilkan grup yang sudah ditambahkan
     if st.session_state.col_groups_builder:
-        st.markdown("### Grup yang Sudah Ditambahkan:")
+        st.markdown("### 📋 Grup yang Sudah Ditambahkan")
         for i, grp in enumerate(st.session_state.col_groups_builder):
-            col_x, col_y = st.columns([4, 1])
-            with col_x:
-                st.markdown(f"**{grp['name']}**: {', '.join([f'`{c}`' for c in grp['columns']])}")
-            with col_y:
-                if st.button("🗑️", key=f"del_{i}"):
-                    st.session_state.col_groups_builder.pop(i)
-                    st.rerun()
+            with st.container(border=True):
+                col_x, col_y = st.columns([5, 1])
+                with col_x:
+                    mode_icon = "⚡" if grp.get("mode") == "fast" else "🔍"
+                    st.markdown(f"**{grp['name']}** {mode_icon}")
+                    st.caption(f"Kolom: {', '.join([f'`{c}`' for c in grp['columns']])}")
+                    st.caption(f"Konteks: _{grp.get('context', '-')[:80]}..._")
+                with col_y:
+                    if st.button("🗑️", key=f"del_{i}"):
+                        st.session_state.col_groups_builder.pop(i)
+                        st.rerun()
 
         st.divider()
         if st.button("▶️ Generate Codeframe dengan AI", type="primary", use_container_width=True):
@@ -476,6 +493,9 @@ elif st.session_state.step == "codeframe":
     mb = load_memory_bank()
 
     if st.session_state.codeframe is None:
+        import random
+
+        # Kumpulkan verbatim per grup
         all_verbatims = []
         for grp in st.session_state.col_groups:
             for col in grp["columns"]:
@@ -483,20 +503,89 @@ elif st.session_state.step == "codeframe":
                     vals = df[col].dropna().astype(str).tolist()
                     all_verbatims.extend([v for v in vals if v.strip() and v != "nan"])
 
-        with st.spinner(f"🤖 AI sedang membaca {len(all_verbatims)} verbatim dan membuat codeframe..."):
-            try:
-                prompt = build_codeframe_prompt(
-                    mb, all_verbatims,
-                    st.session_state.question_context,
-                    st.session_state.language
-                )
-                raw = call_gemini(st.session_state.api_key, prompt, temperature=0.3)
-                result = parse_json_response(raw)
-                st.session_state.codeframe = result.get("codeframe", [])
-                st.success("✅ Codeframe berhasil dibuat! Silakan review di bawah ini.")
-            except Exception as e:
-                st.error(f"Error saat generate codeframe: {e}")
-                st.stop()
+        # Gunakan context & mode dari grup pertama (atau gabungan semua grup)
+        # Karena setiap grup punya codeframe sendiri, proses per grup
+        grp_codeframes = {}
+        all_success = True
+
+        for g_idx, grp in enumerate(st.session_state.col_groups):
+            grp_verbatims = []
+            for col in grp["columns"]:
+                if col in df.columns:
+                    vals = df[col].dropna().astype(str).tolist()
+                    grp_verbatims.extend([v for v in vals if v.strip() and v != "nan"])
+
+            if not grp_verbatims:
+                continue
+
+            mode = grp.get("mode", "fast")
+            ctx  = grp.get("context", grp["name"])
+
+            if mode == "fast":
+                # Sampel 150 acak
+                sample = random.sample(grp_verbatims, min(150, len(grp_verbatims)))
+                with st.spinner(f"⚡ [{grp['name']}] Mode CEPAT — membaca {len(sample)} sampel dari {len(grp_verbatims)} verbatim..."):
+                    try:
+                        time.sleep(2)
+                        prompt = build_codeframe_prompt(mb, sample, ctx, st.session_state.language)
+                        raw = call_gemini(st.session_state.api_key, prompt, temperature=0.3)
+                        result = parse_json_response(raw)
+                        grp_codeframes[grp["name"]] = result.get("codeframe", [])
+                    except Exception as e:
+                        st.error(f"Error grup '{grp['name']}': {e}")
+                        all_success = False
+            else:
+                # Mode LENGKAP: baca semua per batch 100, kumpulkan tema, buat codeframe final
+                batches = [grp_verbatims[i:i+100] for i in range(0, len(grp_verbatims), 100)]
+                all_themes = []
+                st.info(f"🔍 [{grp['name']}] Mode LENGKAP — memproses {len(batches)} batch dari {len(grp_verbatims)} verbatim...")
+                progress_bar = st.progress(0)
+                for b_i, batch in enumerate(batches):
+                    try:
+                        time.sleep(3)
+                        prompt_batch = build_codeframe_prompt(mb, batch, ctx, st.session_state.language)
+                        raw_batch = call_gemini(st.session_state.api_key, prompt_batch, temperature=0.3)
+                        res_batch = parse_json_response(raw_batch)
+                        all_themes.extend(res_batch.get("codeframe", []))
+                        progress_bar.progress((b_i + 1) / len(batches))
+                    except Exception as e:
+                        st.warning(f"Batch {b_i+1} error (dilanjutkan): {e}")
+                        time.sleep(5)
+
+                # Gabung semua tema → minta AI buat codeframe final
+                with st.spinner(f"🔍 [{grp['name']}] Menggabungkan {len(all_themes)} tema jadi codeframe final..."):
+                    try:
+                        themes_text = "\n".join([f"- {t.get('label_id','')} / {t.get('label_en','')}" for t in all_themes])
+                        merge_prompt = f"""Kamu ahli coding verbatim riset pasar.
+Berikut daftar tema mentah dari beberapa batch verbatim untuk pertanyaan: {ctx}
+
+{themes_text}
+
+Gabungkan tema yang serupa, hapus duplikat, dan buat CODEFRAME FINAL yang bersih dan terstruktur.
+Ikuti konvensi penomoran (positif 100-an, negatif 500-an). Sertakan Nett/kategori besar.
+
+Kembalikan HANYA JSON (tanpa teks lain):
+{{"codeframe": [{{"code": 101, "nett": "Nama Nett", "label_id": "Label ID", "label_en": "Label EN"}}]}}"""
+                        time.sleep(2)
+                        raw_final = call_gemini(st.session_state.api_key, merge_prompt, temperature=0.2)
+                        result_final = parse_json_response(raw_final)
+                        grp_codeframes[grp["name"]] = result_final.get("codeframe", [])
+                    except Exception as e:
+                        st.error(f"Error merge codeframe '{grp['name']}': {e}")
+                        grp_codeframes[grp["name"]] = all_themes
+                        all_success = False
+
+        if all_success or grp_codeframes:
+            # Gabung semua codeframe dari semua grup (dengan marker nett per grup jika >1 grup)
+            final_codeframe = []
+            for grp_name, cf in grp_codeframes.items():
+                if len(st.session_state.col_groups) > 1:
+                    for item in cf:
+                        item["nett"] = f"[{grp_name}] {item.get('nett','')}"
+                final_codeframe.extend(cf)
+            st.session_state.codeframe = final_codeframe
+            st.session_state.grp_codeframes = grp_codeframes
+            st.success(f"✅ Codeframe selesai! Total {len(final_codeframe)} kode dari {len(grp_codeframes)} grup. Silakan review di bawah.")
 
     st.warning("⚠️ **Harap review codeframe ini sebelum lanjut autocode!** Edit kode/label/nett jika ada yang perlu diperbaiki.")
 
