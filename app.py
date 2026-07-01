@@ -426,21 +426,15 @@ elif st.session_state.step == "select_cols":
         st.session_state.col_groups_builder = []
 
     # Form tambah grup baru
-    st.markdown("### ➕ Tambah Grup Baru")
+    st.markdown("### ➕ Tambah Grup")
     with st.container(border=True):
         grp_name = st.text_input("Nama Kategori/Nett", placeholder="Contoh: Alasan Memilih Brand", key="grp_name_input")
         grp_cols = st.multiselect("Pilih kolom verbatim untuk grup ini", all_cols, key="grp_cols_input")
         grp_ctx  = st.text_area(
-            "Konteks pertanyaan untuk grup ini",
+            "Konteks pertanyaan",
             placeholder="Contoh: Q5. Apa alasan Anda memilih brand ini? / Why did you choose this brand?",
-            height=70,
+            height=80,
             key="grp_ctx_input"
-        )
-        grp_mode = st.radio(
-            "Mode generate codeframe",
-            ["⚡ CEPAT — sampel 150 verbatim (cukup untuk data homogen)",
-             "🔍 LENGKAP — baca semua verbatim per batch (lebih akurat, lebih lambat)"],
-            key="grp_mode_input"
         )
 
         if st.button("✅ Tambah Grup", type="primary"):
@@ -455,7 +449,6 @@ elif st.session_state.step == "select_cols":
                     "name": grp_name,
                     "columns": grp_cols,
                     "context": grp_ctx,
-                    "mode": "fast" if "CEPAT" in grp_mode else "full"
                 })
                 st.rerun()
 
@@ -466,20 +459,33 @@ elif st.session_state.step == "select_cols":
             with st.container(border=True):
                 col_x, col_y = st.columns([5, 1])
                 with col_x:
-                    mode_icon = "⚡" if grp.get("mode") == "fast" else "🔍"
-                    st.markdown(f"**{grp['name']}** {mode_icon}")
+                    st.markdown(f"**{grp['name']}**")
                     st.caption(f"Kolom: {', '.join([f'`{c}`' for c in grp['columns']])}")
-                    st.caption(f"Konteks: _{grp.get('context', '-')[:80]}..._")
+                    st.caption(f"Konteks: _{grp.get('context', '-')[:100]}_")
                 with col_y:
                     if st.button("🗑️", key=f"del_{i}"):
                         st.session_state.col_groups_builder.pop(i)
                         st.rerun()
 
         st.divider()
+        st.markdown("### ⚙️ Mode Generate Codeframe")
+        gen_mode = st.radio(
+            "Pilih mode untuk semua grup:",
+            ["⚡ CEPAT — sampel 150 verbatim per grup (cocok untuk data homogen, lebih cepat)",
+             "🔍 LENGKAP — baca semua verbatim per batch (tidak ada yang terlewat, lebih lambat)"],
+            label_visibility="collapsed"
+        )
+        st.caption("⚡ CEPAT: AI baca 150 sampel acak → buat codeframe. Cocok jika jawaban tidak terlalu beragam.")
+        st.caption("🔍 LENGKAP: AI baca semua verbatim per batch 100 → gabung jadi codeframe final. Lebih akurat untuk data besar & beragam.")
+
+        st.divider()
         if st.button("▶️ Generate Codeframe dengan AI", type="primary", use_container_width=True):
             if not st.session_state.api_key:
                 st.error("Masukkan Gemini API Key di sidebar terlebih dahulu!")
             else:
+                mode_val = "fast" if "CEPAT" in gen_mode else "full"
+                for grp in st.session_state.col_groups_builder:
+                    grp["mode"] = mode_val
                 st.session_state.col_groups = st.session_state.col_groups_builder
                 st.session_state.step = "codeframe"
                 st.rerun()
