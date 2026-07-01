@@ -20,7 +20,7 @@ st.set_page_config(
 )
 
 MEMORY_BANK_PATH = "memory_bank.json"
-GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
+GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 # ─────────────────────────────────────────────
 # HELPERS
